@@ -1,5 +1,5 @@
 
-
+//https://codingbat.com/prob/p192570
 public class RemoveStrings{
 
     public static void main(String[] args){
