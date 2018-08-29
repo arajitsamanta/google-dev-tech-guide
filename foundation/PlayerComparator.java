@@ -38,11 +38,7 @@ class PlayerComparator {
 			player[i] = new Player(scan.next(), scan.nextInt());
 		}
 		scan.close();
-
+		
 		Arrays.sort(player, checker);
-		System.out.println("Sorted player*****");
-		for (int i = 0; i < player.length; i++) {
-			System.out.printf("%s %s\n", player[i].name, player[i].score);
-		}
 	}
 }
