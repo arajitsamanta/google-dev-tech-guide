@@ -1,6 +1,6 @@
 
-import java.lang.Math;
 
+//https://codingbat.com/prob/p198700
 class EvenlySpaced {
 
     public static void main(String[] args) {
