@@ -1,7 +1,7 @@
 
 def primitiveTypes():
     ##Integers
-    a=-9  
+    a=-9
     b=0x4F
     print ("Integer:",a)
     print ("Hexadecimal integer:",b)
@@ -20,5 +20,19 @@ def primitiveTypes():
     print ("Strings:",str)
     print ("Characters:",char)
 
-## call functions    
+    ##Collections
+    ##Dictionary or HashMap or HashTable
+    myDictionary={
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }
+    print("Collection: Dictionary",myDictionary)
+
+    ##Set : Sets are unordered, so the items will appear in a random order.
+    setOfFruits = {"apple", "banana", "cherry"}
+    print("Collection: Set",setOfFruits)
+
+
+## call functions
 primitiveTypes()
