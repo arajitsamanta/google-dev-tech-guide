@@ -34,5 +34,5 @@ def primitiveTypes():
     print("Collection: Set",setOfFruits)
 
 
-# call functions
+#call functions
 primitiveTypes()
