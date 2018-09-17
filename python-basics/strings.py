@@ -1,7 +1,7 @@
 
 def stringExample():
-    #creates an object storing the given literal string and its reference is assigned to name. 
-    name = "John Smith" 
+    #creates an object storing the given literal string and its reference is assigned to name.
+    name = "John Smith"
     #You can also create a string using the str() constructor
     student = str("john doe")
     print(name, student)
@@ -9,11 +9,11 @@ def stringExample():
     #The string constructor can also be used to create string representations of numeric and boolean values.
     x = 45
     intStr = str( x )          #'45'
-    floatStr = str( 56.89 )    #'56.89' 
+    floatStr = str( 56.89 )    #'56.89'
     boolStr = str( False )     #'False'
     print(intStr,floatStr,boolStr)
 
-    #Likewise, the numeric type constructors can be used to convert numeric strings to the respective type. An exception is 
+    #Likewise, the numeric type constructors can be used to convert numeric strings to the respective type. An exception is
     #raised if the string does not contain a valid literal numeric value.
     i = int( "85" )      #85
     f = float( '3.14' )  #3.14
@@ -38,7 +38,7 @@ def escapeSequence():
     print(msg)
 
 def stringOperations():
-    ##String concatenation
+    #String concatenation
     strvar = 'This is '
     fullstr = strvar + "a string"
     print('String concatenation using +', fullstr)
@@ -50,11 +50,11 @@ def stringOperations():
     #Two strings literals can also be concatenated by placing them adjacent to each other
     print("These two string literals " "will be concatenated.")
 
-    ##String length
+    #String length
     #Python provides the built-in len() function that is used to get the length of a string
     print("Length of the string = ", len('john doe'))
 
-    ##Character Access
+    #Character Access
     #In Python, we use an array subscript with the first character having an index of zero.
     msg = "This is a string!"
     print("The first character is", msg[0])
@@ -63,8 +63,8 @@ def stringOperations():
     #Python allows you to index from the end instead of the front by using negative subscripts. The last statement in th previous code segment could be rewritten as follows
     print("The last character is", msg[-1])
 
-    ##Extracting substring.
-    #Python provides the slicing operator for extracting a substring. 
+    #Extracting substring.
+    #Python provides the slicing operator for extracting a substring.
     name = "John Smith"
     first = name[0:4]
     last = name[5:]
@@ -74,13 +74,13 @@ def stringOperations():
     end = name[:-4]
     print(end)
 
-    ##String duplication
+    #String duplication
     #Python provides a string operation not found in Java for duplicating or repeating a string. Printing a dashed line is a common operation in text-based 
     #applications. One way to do it is as a string literal
     print("---------------------------------------------")
     print("-" * 45)
 
-    ##Formatted String
+    #Formatted String
     #Python overloads the binary and modulus operator (%) to work with strings. When applied to a string, it creates a new formatted string similar to the printf() 
     #method in Java and the sprintf() function in C. Consider the following example
     avgGrade=5.789
