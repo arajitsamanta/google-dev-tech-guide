@@ -34,7 +34,40 @@ def constants():
     MAX_SIZE = 100
     print (TAX_RATE, MAX_SIZE)
 
+# ***** Varibale Scope *****
+"""
+built-in
+    Variables and literal values defined as part of the language. These can be used anywhere within a program.
+global or module
+    Variables created at the top-level of a source file or module (outside of all functions and classes). Unlike other languages in which a global variable can be used anywhere within a program, each module in Python creates its own global scope.
+local
+    Variables created within a function are local to that function. Function and method arguments are local variables.
+instance
+    Variables defined as data fields of a class.    
+"""
+# ***** Referencing Global Variables *****
+# GLobal variable declaration on module file level
+varA = 40 
+
+def one( varB ) :
+   #Access global variable varA
+   varC = varA + varB
+   return varC
+
+print("Accessing global vars",varA, one( 20 ))
+
+def two( varB ) :
+   #To modify a global variable from within a function, you must use the global declaration which tells the Python interpreter to modify the global variable when it is assigned a new value instead of creating a new local variable.
+   global varA
+   varC = varA + varB
+   #Below code wont wont create a new local variable instead it will refer globally declared varA
+   varA = 0
+   return varC
+
+print("Modify global vars",varA, two( 20 ))
+
 #call functions
 varibaleDeclarations()
 varibaleAssignments()
 constants()
+

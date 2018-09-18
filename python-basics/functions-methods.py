@@ -93,8 +93,7 @@ The order in which functions are listed within a file is not important, but the 
 place the top-level statmentes within a single driver function and then call this function at the end of the file. Other functions used to subdivide the problem
 would be placed between the driver function and the call at the end of the file as illustrated in the following example.
 """
-#Simulate the rolling of two dice using the random
-#number generator.
+#Simulate the rolling of two dice using the random number generator.
 
 from random import randint
 
