@@ -47,6 +47,57 @@ def orderedList():
     theFile.close()
     print("Ordered list created from file",theList)
 
+# Python provides several means for deleting items from a list. The first approach uses the remove() method which allows you to 
+# delete an item by value.
+def removeItems():
+    theList = [ 10, 11, 12, 13 ]
+
+    # Delete an item
+    # Function prototype -> list.remove(item)
+    theList.remove(11)
+    print("After removing list is",theList)
+
+    # To remove an item by index, you can use the pop() method which retrieves and then removes the item at the given index. 
+    # In the following code segment, we use the pop() method to retrieve and remove the item at index position one.
+    # When an item is removed from the list, the items in sequential order following the removed item are shifted down and the 
+    # size of the list shrinks by one. You can omit the index position for pop() and the item in the last element will be retrieve and removed.
+    # Function prototype -> list.pop(index=0)
+    x=theList.pop()
+    print("Remove a list item using index", theList,", Removed item is",x)
+
+def listSearch():
+
+    # **** Item Search ****
+    # We can search for an item within the list using the index() method which returns the element index of the first occurrence in
+    # the list of the given value. If the list does not contain the given value, an exception is raised.
+    #Function prototype -> list.index(item)
+    theList = [ 10, 11, 12, 12, 13 ]
+    pos = theList.index( 13 )
+    print("Index of deleted item is",pos) 
+
+    # **** Membership ****
+    # As with strings, the in operator (and the not in version) can be used to determine if the list contains a given item.
+    # Function prototype -> item in list
+    if 13 in theList:
+        print("13 am an existing item in the list")
+
+    # use list.index() in conjunction with in to find out index of an item.
+    if 12 in theList:
+        print("12 exists at index",theList.index(12))
+    else:
+        print("12 don't exists")
+
+    # To count no of occurences of a particular item in the list, we can use count() method
+    # Function prototype -> list.count(item)
+    print("12 exists",theList.count(12) , "times in the list")
+
+    # **** Min and Max of a List ****
+    # To find min and max of a numeric list we can use min() and max() function
+    # Function prototype -> min(), max()
+    print("Min ",min(theList), "Max", max(theList))
+
 # Invoke test functions
 addListItems()
 orderedList()
+removeItems()
+listSearch()
