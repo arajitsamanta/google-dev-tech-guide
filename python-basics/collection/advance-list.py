@@ -96,8 +96,45 @@ def listSearch():
     # Function prototype -> min(), max()
     print("Min ",min(theList), "Max", max(theList))
 
+def concatAndDuplicate() :
+    #Concat can be done using simple + operatior
+    listA=[1,4,5]
+    listB=[6,7]
+    print("list concatenation", listA+listB)
+
+    #Deplicate a list
+    listA=[90,91,92]
+    listB=listA+[]
+    listB[0]=9
+    print("Duplcaited and updated list",listB)
+
+    #Reverse a list can be invoked by using reverse() function
+    #Function prototype -> list.reverse()
+    listA=[1,2,3]
+    listA.reverse()
+    print("Reverse list",listA)
+
+    #Replicattion
+    """
+    We used the repeat operator to create a list with a given size in order to use it like an array in Java. But this operator can be used to 
+    repetitively copy any list. The contents of the given list is replicated the number of times indicated by the integer value on the right 
+    hand side. If the list contains multiple values, all of the values are replicated in order. In the following example, we create a 100 
+    element integer list with the sequence of values [0..4] repeating at every 5th element.
+    """
+    replicatedList = [ 0, 1, 2, 3, 4 ] * 3
+    print("List replication",replicatedList)
+
+def listSort():
+    listA=[9,45,0,3]
+    #A list can be sorted by invoking sort() method on the list
+    #Function prototype -> list.sort()
+    listA.sort()
+    print("Sorted list",listA)
+
 # Invoke test functions
 addListItems()
 orderedList()
 removeItems()
 listSearch()
+concatAndDuplicate()
+listSort()
