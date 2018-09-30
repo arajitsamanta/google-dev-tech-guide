@@ -1,0 +1,8 @@
+STUDENT REPORT
+Computer Programming I
+----------------------------------------
+ 100  Smith, John            92.40
+ 208  Roberts, Jane          88.05
+ 334  Green, Patrick         76.35
+----------------------------------------
+Average Grade                85.60
