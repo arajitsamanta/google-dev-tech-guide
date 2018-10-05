@@ -1,30 +1,37 @@
 # point.py
 # Defines a class to represent two-dimensional discrete points.
 
-class Point :
 
-    #Python default constructor
-   def __init__( self, x = 0, y = 0 ) :
-      self.XCoord = x
-      self.YCoord = y
+class Point:
 
-   def __str__( self ) :
-      return "(" + str( self.XCoord ) + ", " +  str( self.YCoord ) + ")"
+    # Python default constructor
+    # Instance variables are specified by preceding the name with the self reference. Even though a data field can be defined within any method, common practice
+    # dictates that data fields should be defined within the constructor. The Point class defines two data fields in the constructor, xCoord and yCoord,
+    def __init__(self, x=0, y=0):
+        self.XCoord = x
+        self.YCoord = y
 
-   def getX( self ) :
-      return self.XCoord
+    # Class methods of the form __xyz__() are actually operator definitions and can not be called directly. Instead, they are called automatically for
+    # the appropriate operator. In our example above, the __init__() method is automatically called when creating an object and the __str__() method is
+    # automatically called when converting the object to a string.
+    def __str__(self):
+        return "(" + str(self.XCoord) + ", " + str(self.YCoord) + ")"
 
-   def getY( self ) :
-      return self.YCoord
+    def getX(self):
+        return self.XCoord
 
-   def shift( self, xInc, yInc ) :
-      self.XCoord += xInc
-      self.YCoord += yInc
+    def getY(self):
+        return self.YCoord
+
+    def shift(self, xInc, yInc):
+        self.XCoord += xInc
+        self.YCoord += yInc
+
 
 p = Point()
-print("Object instantiated with default values",p.getX(),p.getY())
-p = Point(5,6)
-print("Object instantiated with custom values",p.getX(),p.getY())
-p.shift(10,50)
-print("Updated object state",p.getX(),p.getY())
-print("String representation of a python object",str(p))
+print("Object instantiated with default values", p.getX(), p.getY())
+p = Point(5, 6)
+print("Object instantiated with custom values", p.getX(), p.getY())
+p.shift(10, 50)
+print("Updated object state", p.getX(), p.getY())
+print("String representation of a python object", str(p))

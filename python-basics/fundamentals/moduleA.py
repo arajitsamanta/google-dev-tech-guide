@@ -5,6 +5,7 @@
 
 from math import sqrt
 
-def funcA( x, y ) :
-  d = sqrt( x * x + y * y )
-  return d
+
+def funcA(x, y):
+    d = sqrt(x * x + y * y)
+    return d

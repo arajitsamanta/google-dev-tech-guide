@@ -3,21 +3,21 @@
 # the main flow of execution.
 
 # ***** Importing Modules ******
-#The modules are simply Python source files and thus have a .py extension. When importing a module, however, you omit the extension. 
-#The examples in this book assume the modules are stored in the same directory as the driver program.
+# The modules are simply Python source files and thus have a .py extension. When importing a module, however, you omit the extension.
+# The examples in this book assume the modules are stored in the same directory as the driver program.
 
 import moduleA
 import moduleB
 
 # ***** Multiple Exclusion *****
-#Module moduleA is imported in both module-driver.py and moduleB.py since its contents is used in both. The Python interpreter will only import
-#a module once, even if it encountered multiple times. You should import a module within a source file if any component of that module
-#is used. Let the interpreter omit it, if it has already been included.
+# Module moduleA is imported in both module-driver.py and moduleB.py since its contents is used in both. The Python interpreter will only import
+# a module once, even if it encountered multiple times. You should import a module within a source file if any component of that module
+# is used. Let the interpreter omit it, if it has already been included.
 
-value1 = int( input( "Enter value one: " ) )
-value2 = int( input( "Enter value two: " ) )
-resultA = moduleA.funcA( value1, value2 )
-resultB = moduleB.funcB( resultA )
+value1 = int(input("Enter value one: "))
+value2 = int(input("Enter value two: "))
+resultA = moduleA.funcA(value1, value2)
+resultB = moduleB.funcB(resultA)
 print("Results = ", resultA, resultB)
 
 # ***** Multiple Exclusion *****
