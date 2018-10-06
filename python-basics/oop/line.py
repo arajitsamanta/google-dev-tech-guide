@@ -37,9 +37,3 @@ class Line :
       
    def getEndPoint( self ) :
       return self.endPoint
-
-
-p1 = Point(5, 6)
-p2 = Point(5, 6)
-line=Line(p1,p2)
-print(line.isHorizontal())
