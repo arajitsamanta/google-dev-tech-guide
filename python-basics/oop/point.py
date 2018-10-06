@@ -26,12 +26,3 @@ class Point:
     def shift(self, xInc, yInc):
         self.XCoord += xInc
         self.YCoord += yInc
-
-
-p = Point()
-print("Object instantiated with default values", p.getX(), p.getY())
-p = Point(5, 6)
-print("Object instantiated with custom values", p.getX(), p.getY())
-p.shift(10, 50)
-print("Updated object state", p.getX(), p.getY())
-print("String representation of a python object", str(p))
