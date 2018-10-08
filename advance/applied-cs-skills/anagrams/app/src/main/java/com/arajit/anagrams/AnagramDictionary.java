@@ -21,8 +21,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class AnagramDictionary {
 
@@ -30,14 +34,33 @@ public class AnagramDictionary {
     private static final int DEFAULT_WORD_LENGTH = 3;
     private static final int MAX_WORD_LENGTH = 7;
     private Random random = new Random();
+
     private List<String> wordList=new ArrayList<>();
+    private Map<String, List<String>> lettersToWord = new HashMap<>();
+    private Set<String> wordSet=new HashSet<>();
 
     public AnagramDictionary(Reader reader) throws IOException {
         BufferedReader in = new BufferedReader(reader);
         String line;
         while((line = in.readLine()) != null) {
             String word = line.trim();
+
+            //Add to worlList
             wordList.add(word);
+
+            //Add to wordSet
+            wordSet.add(word);
+
+            //Add to lettersToWord map
+            String key=AnagramUtil.sortLetters(word);
+            if(lettersToWord.containsKey(key)){
+                lettersToWord.get(key).add(word);
+            }else{
+                List<String> tmpList=new ArrayList<>();
+                tmpList.add(word);
+                lettersToWord.put(key,tmpList);
+            }
+
         }
     }
 
@@ -46,7 +69,7 @@ public class AnagramDictionary {
     }
 
     public List<String> getAnagrams(String targetWord) {
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         String targetWordSorted=AnagramUtil.sortLetters(targetWord);
         int targetWordLength=targetWordSorted.length();
         wordList.forEach(str -> {
@@ -60,7 +83,7 @@ public class AnagramDictionary {
     }
 
     public List<String> getAnagramsWithOneMoreLetter(String word) {
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         return result;
     }
 
